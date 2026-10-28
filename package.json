@@ -1,0 +1,19 @@
+{
+  "name": "hotelpro-monorepo",
+  "version": "1.0.0",
+  "description": "HotelPro - Full Stack Hotel Reservation Management Application",
+  "scripts": {
+    "install:all": "npm.cmd --prefix server install && npm.cmd --prefix client install",
+    "start": "node run-all.js",
+    "dev": "node run-all.js",
+    "seed": "npm.cmd --prefix server run seed",
+    "server": "npm.cmd --prefix server run dev",
+    "client": "npm.cmd --prefix client run dev",
+    "build": "npm.cmd --prefix client run build",
+    "test": "node --test server/tests/**/*.test.js"
+  },
+  "keywords": ["hotel", "reservation", "react", "express", "mongodb"],
+  "author": "HotelPro Team",
+  "license": "ISC"
+}
+

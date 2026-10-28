@@ -1,0 +1,365 @@
+:root {
+  --primary-navy: #0f2438;
+  --secondary-navy: #183654;
+  --dark-navy: #091624;
+  --accent-gold: #c5a880;
+  --accent-gold-hover: #b39569;
+  --light-gold: #f4ece1;
+  --warm-beige: #fbf9f6;
+  --warm-cream: #f4f0eb;
+  --text-primary: #1e293b;
+  --text-muted: #64748b;
+  --card-bg: #ffffff;
+  --border-subtle: #e2e8f0;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --danger-color: #ef4444;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --shadow-sm: 0 1px 3px rgba(15, 36, 56, 0.08);
+  --shadow-md: 0 4px 12px rgba(15, 36, 56, 0.08);
+  --shadow-lg: 0 10px 25px rgba(15, 36, 56, 0.1);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--warm-beige);
+  color: var(--text-primary);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .brand-font {
+  font-family: var(--font-heading);
+  color: var(--primary-navy);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Custom Navbar */
+.navbar-hotelpro {
+  background-color: var(--primary-navy);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  padding: 14px 0;
+  transition: all 0.3s ease;
+}
+
+.brand-logo {
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-gold {
+  color: var(--accent-gold);
+}
+
+.nav-link-custom {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 8px 16px !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link-custom:hover, .nav-link-custom.active {
+  color: #ffffff !important;
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: var(--accent-gold);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-gold:hover, .btn-gold:focus {
+  background-color: var(--accent-gold-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(197, 168, 128, 0.35);
+}
+
+.btn-navy {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+}
+
+.btn-navy:hover, .btn-navy:focus {
+  background-color: var(--secondary-navy);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-navy {
+  border: 1.5px solid var(--primary-navy);
+  color: var(--primary-navy);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-navy:hover {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero-wrapper {
+  background: linear-gradient(rgba(15, 36, 56, 0.75), rgba(9, 22, 36, 0.88)),
+    url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #ffffff;
+  padding: 100px 0 120px 0;
+  position: relative;
+}
+
+.hero-tagline {
+  color: var(--accent-gold);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  color: #e2e8f0;
+  max-width: 650px;
+  margin-bottom: 35px;
+}
+
+/* Floating Search Bar */
+.search-card {
+  background: #ffffff;
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  margin-top: -50px;
+  position: relative;
+  z-index: 10;
+  border: 1px solid var(--border-subtle);
+}
+
+/* Hotel Cards */
+.hotel-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: #cbd5e1;
+}
+
+.hotel-card-img-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: #e2e8f0;
+}
+
+.hotel-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.hotel-card:hover .hotel-card-img {
+  transform: scale(1.05);
+}
+
+.hotel-badge-featured {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--primary-navy);
+  color: var(--accent-gold);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(197, 168, 128, 0.4);
+}
+
+.hotel-badge-city {
+  position: absolute;
+  bottom: 14px;
+  left: 14px;
+  background: rgba(15, 36, 56, 0.85);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+}
+
+.hotel-card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.hotel-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--primary-navy);
+}
+
+.star-rating {
+  color: #f59e0b;
+  font-size: 0.9rem;
+}
+
+.amenity-pill {
+  background-color: #f1f5f9;
+  color: #475569;
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+}
+
+.price-display {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--primary-navy);
+}
+
+.price-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+/* Room Cards */
+.room-card {
+  background: #ffffff;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  margin-bottom: 24px;
+}
+
+.room-card:hover {
+  border-color: var(--accent-gold);
+  box-shadow: var(--shadow-md);
+}
+
+/* Status Badges */
+.badge-confirmed {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-weight: 600;
+}
+
+.badge-cancelled {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.badge-completed {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer-hotelpro {
+  background-color: var(--dark-navy);
+  color: #94a3b8;
+  padding: 60px 0 30px 0;
+  margin-top: 80px;
+}
+
+.footer-heading {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-link {
+  color: #94a3b8;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: var(--accent-gold);
+}
+
+/* Admin Sidebar & Layout */
+.admin-sidebar {
+  background-color: var(--primary-navy);
+  color: #ffffff;
+  min-height: calc(100vh - 70px);
+  padding: 20px 0;
+}
+
+.admin-nav-item {
+  color: #cbd5e1;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.admin-nav-item:hover, .admin-nav-item.active {
+  background-color: var(--secondary-navy);
+  color: var(--accent-gold);
+  border-left: 4px solid var(--accent-gold);
+}
+
